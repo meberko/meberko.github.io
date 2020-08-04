@@ -1,13 +1,82 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <head>
+        <title>Michael E. Berkowitz</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/css/uikit.min.css" />
 
-<div class="header">
-  Header
-</div>
-
-</body>
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit-icons.min.js"></script>
+    </head>
+    <body onload="load()">
+        <nav id="navbar" class="uk-animation-fade uk-navbar-container" uk-navbar uk-sticky="bottom: #offset">
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <li id="navbar-home" class="uk-active navbar-item" onclick="navbar_click(this)"><a>Home</a></li>
+                    <li id="navbar-about" class="navbar-item" onclick="navbar_click(this)"><a>About</a></li>
+                    <li id="navbar-projects" class="navbar-item" onclick="navbar_click(this)"><a>Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="home" class="uk-background-cover uk-height-large uk-light uk-flex uk-flex-center uk-flex-middle" uk-parallax="bgy:-300; opacity: 1,0" style="background-image: url(static/hero_transparent.png);">
+            <span style="opacity:100%">
+                <p id="name-text" class="uk-heading-medium uk-text-center text">MICHAEL BERKOWITZ</p>
+                <p id="title-text" class="uk-text-large uk-text-center text" uk-scrollspy="cls: uk-animation-slide-top; repeat: true" style="animation-duration: 0.75s">SOFTWARE ENGINEER & PHYSICIST</p>
+                <ul class="uk-subnav uk-flex-center">
+                    <li uk-scrollspy="cls: uk-animation-slide-left; repeat: true" style="animation-duration: 0.75s">
+                        <a id="github-icon" href="https://www.github.com/meberko" uk-icon="icon: github; ratio: 3"></a>
+                    </li>
+                    <li uk-scrollspy="cls:uk-animation-slide-bottom; repeat: true" style="animation-duration: 0.75s">
+                        <a id="linkedin-icon" href="https://www.linkedin.com/in/michaelberkowitz" uk-icon="icon: linkedin; ratio: 3"></a>
+                    </li>
+                    <li uk-scrollspy="cls:uk-animation-slide-right; repeat: true" style="animation-duration: 0.75s">
+                        <a id="gmail-icon" href="mailto:m.e.berkowitz@gmail.com" uk-icon="icon: google; ratio: 3"></a>
+                    </li>
+                </ul>
+            </span>
+        </div>
+        <div id="about" class="uk-container uk-padding" uk-scrollspy="cls:uk-animation-scale-up; repeat: true" style="animation-duration: 0.75s" uk-grid>
+            <img id="headshot" class="uk-width-1-3" data-src="/static/headshot-circle.png" alt="" uk-img>
+            <div class="uk-width-expand">
+                <div id="about-card" class="uk-card-default uk-card-body ">
+                    <h1 class="uk-card-title" style="color: white">Who is this guy?</h3>
+                    <div class="uk-container uk-grid">
+                        <object class="uk-padding-small" type="image/svg+xml" data="/static/pin.svg"></object>
+                        <p class="uk-width-expand uk-padding-small">New York, NY</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="spacer" style="height: 1000px"></div>
+        <div id="projects" class="uk-container uk-padding" uk-scrollspy="cls: uk-animation-scale-up; repeat: true" style="animation-duration: 0.75s" uk-grid>
+            <p class="uk-heading-large uk-text-center"> About my projects!</p>
+            <ul uk-accordion>
+                <li class="uk-open">
+                    <a class="uk-accordion-title" href="#">Item 1</a>
+                    <div class="uk-accordion-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title" href="#">Item 2</a>
+                    <div class="uk-accordion-content">
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit.</p>
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title" href="#">Item 3</a>
+                    <div class="uk-accordion-content">
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </body>
+    <footer>
+        <script src="/static/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="/static/styles/style.css"/>
+    </footer>
 </html>
