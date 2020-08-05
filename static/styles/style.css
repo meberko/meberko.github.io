@@ -18,12 +18,17 @@ html {
 }
 
 body {
-    padding-bottom: 10000px;
+    /*padding-bottom: 10000px;*/
     background-color: #85D0CB;
 }
 
+a {
+    outline: 0;
+}
+
 svg {
-    stroke: black;
+    stroke: white;
+    fill: white;
     stroke-width: 0.5px;
 }
 
@@ -37,9 +42,49 @@ object {
     width: 25px;
 }
 
-object > svg {
+object * {
     stroke: white;
     fill: white;
+}
+
+footer {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 3rem;
+}
+.card-text {
+    font-size: 2rem;
+}
+
+.no-margin {
+    margin: 0px;
+}
+
+.hline {
+    background-color: white;
+    height: 1px;
+    width: 100%;
+    margin: 0px;
+}
+
+.caption-text {
+    font-family: arial;
+    font-size: 1rem;
+}
+
+.skills {
+    display: flex;
+    align-items: center;
+}
+
+.project-img {
+    border-radius: 10px;
+}
+
+.project-text {
+    font-size: 1.5rem;
 }
 
 #name-text {
@@ -75,6 +120,11 @@ object > svg {
 }
 
 #about-card {
+    background-color: #e27d60;
+    box-shadow: 5px 5px 10px 5px;
+}
+
+#project-card {
     background-color: #e27d60;
     box-shadow: 5px 5px 10px 5px;
 }
