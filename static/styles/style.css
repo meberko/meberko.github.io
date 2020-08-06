@@ -49,6 +49,7 @@ object * {
 
 footer {
     text-align: center;
+    padding: 10px 0px;
 }
 
 .card-title {
@@ -69,14 +70,23 @@ footer {
     margin: 0px;
 }
 
+.sub-titles {
+    font-size: 3vw;
+}
+
 .caption-text {
     font-family: arial;
-    font-size: 1rem;
+    font-size: 1.5vw;
 }
 
 .skills {
     display: flex;
     align-items: center;
+    font-size: 2vw;
+}
+
+.skill-icon {
+    padding: 5px 5px 10px 5px;
 }
 
 .project-img {
@@ -84,7 +94,7 @@ footer {
 }
 
 .project-text {
-    font-size: 1.5rem;
+    font-size: 2.5vw;
 }
 
 #name-text {
