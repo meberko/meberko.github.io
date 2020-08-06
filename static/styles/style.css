@@ -1,17 +1,33 @@
 @font-face {
     font-family: "caviar";
-    src: url('CaviarDreams.ttf')
+    src: url('fonts/CaviarDreams.ttf')
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url('fonts/Roboto-Regular.ttf')
 }
 
 @font-face {
     font-family: "raleway";
-    src: url('Roboto-Regular.ttf')
+    src: url('fonts/Raleway.ttf')
 }
 
 @font-face {
-    font-family: "raleway";
-    src: url('Raleway.ttf')
+    font-family: "lemonmilk";
+    src: url('fonts/LemonMilk.otf')
 }
+
+@font-face {
+    font-family: "arca";
+    src: url('fonts/Arca.otf')
+}
+
+@font-face {
+    font-family: "code";
+    src: url('fonts/CODE Bold.otf')
+}
+
 
 html {
     scroll-behavior: smooth;
@@ -19,7 +35,7 @@ html {
 
 body {
     /*padding-bottom: 10000px;*/
-    background-color: #85D0CB;
+    background-color: #c4dbf6;
 }
 
 a {
@@ -33,7 +49,7 @@ svg {
 }
 
 h1,h2,h3,p {
-    font-family: 'raleway';
+    font-family: 'lemonmilk';
     color: white;
 }
 
@@ -53,9 +69,17 @@ footer {
 }
 
 .card-title {
-    font-size: 3rem;
+    font-family: 'lemonmilk';
+    color: white;
 }
+
+.sub-titles {
+    margin-bottom: 5px;
+}
+
 .card-text {
+    font-family: 'caviar';
+    color: white;
     font-size: 2rem;
 }
 
@@ -70,47 +94,148 @@ footer {
     margin: 0px;
 }
 
-.sub-titles {
-    font-size: 3vw;
+.project-img {
+    border-radius: 10px;
+    border-style: solid;
+    border-color: white;
 }
 
 .caption-text {
     font-family: arial;
-    font-size: 1.5vw;
 }
 
 .skills {
     display: flex;
     align-items: center;
-    font-size: 2vw;
+    font-family: 'caviar';
 }
 
 .skill-icon {
-    padding: 5px 5px 10px 5px;
+    margin-right: -10px;
 }
 
-.project-img {
-    border-radius: 10px;
+@media screen and (max-width: 640px) {
+    .skills {
+        font-size: 1.1rem;
+    }
+    .skill-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .caption-text {
+        font-size: 0.8rem;
+    }
+
+    .card-title {
+        font-size: 1.8rem;
+    }
+
+    .sub-titles {
+        font-size: 1.0rem;
+    }
+
+    .card-text {
+        font-size: 1.0rem;
+    }
+
+    #name-text {
+        font-size: 2.0rem;
+    }
+
+    #desciption {
+        font-size: 1.0rem;
+    }
+
+    #inv-small {
+        display: none;
+    }
+
+    #github-icon > svg {
+        height: 40px;
+        width: 40px;
+    }
+
+    #linkedin-icon > svg {
+        height: 40px;
+        width: 40px;
+    }
+
+    #gmail-icon > svg {
+        height: 40px;
+        width: 40px;
+    }
+
+    #headshot {
+        width: 40%;
+    }
 }
 
-.project-text {
-    font-size: 2.5vw;
+@media screen and (min-width: 641px) {
+    .skills {
+        font-size: 1.0rem;
+    }
+
+    .skill-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .caption-text {
+        font-size: 1rem;
+    }
+
+    .card-title {
+        font-size: 2.0rem;
+    }
+
+    .sub-titles {
+        font-size: 1.5rem;
+    }
+
+    .card-text {
+        font-size: 1.0rem;
+    }
+
+    .inv-big {
+        display: none;
+    }
+
+    #name-text {
+        font-size: 3.5rem;
+    }
+
+    #desciption {
+        font-size: 1.0rem;
+    }
+
+}
+
+#headshot {
+    border-style: solid;
+    border-radius: 50%;
+    border-color: white;
 }
 
 #name-text {
-    color: black;
-    /* -webkit-text-stroke: 1.5px black; */
-    font-family: 'raleway';
+    color: white;
+    font-family: 'lemonmilk';
+}
+
+#description {
+    font-family: 'caviar';
+    font-size: 1.3rem;
 }
 
 #title-text {
-    color: black;
-    /*-webkit-text-stroke: 0.85px black;*/
-    font-family: 'raleway';
+    color: white;
+    font-family: 'caviar';
+    font-weight: bold;
 }
 
 #home {
     height: 100vh;
+    background-color: #3b8beb;
 }
 
 #github-icon > svg {
@@ -125,16 +250,34 @@ footer {
     stroke: #dd4b39;
 }
 
-#location-icon > svg {
-    stroke: #ffffff;
+#navbar-github-icon > svg {
+    stroke: #6e5494;
+}
+
+#navbar-linkedin-icon > svg {
+    stroke: #0077b5;
+}
+
+#navbar-gmail-icon > svg {
+    stroke: #dd4b39;
 }
 
 #about-card {
-    background-color: #e27d60;
-    box-shadow: 5px 5px 10px 5px;
+    background-color: #3b8beb;
+    border-radius: 5px;
+    /*box-shadow: 5px 5px 10px 5px;*/
 }
 
 #project-card {
-    background-color: #e27d60;
-    box-shadow: 5px 5px 10px 5px;
+    background-color: #3b8beb;
+    border-radius: 5px;
+    /*box-shadow: 5px 5px 10px 5px;*/
+}
+
+#logo {
+    width: 100px;
+}
+
+#navbar-ul > li > a {
+    font-size: 1rem;
 }

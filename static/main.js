@@ -10,7 +10,7 @@ locations = {
 };
 
 function load() {
-    window.scrollTo({top: navbar_height, behavior: 'smooth'});
+    window.scrollTo({top: 0, behavior: 'smooth'});
     resize()
 };
 
@@ -18,7 +18,7 @@ function resize() {
     var about_location = document.getElementById("about").offsetTop-navbar_height-margin
     var projects_location = document.getElementById("projects").offsetTop-navbar_height-margin
     locations = {
-        home: navbar_height,
+        home: 0,
         about: about_location,
         projects: projects_location
     };
@@ -26,10 +26,40 @@ function resize() {
 
 function scroll() {
     var curr = window.scrollY;
-    if(curr >= locations["home"] && curr < 0.95*locations["about"]) toggle_active("navbar-home");
-    else if(curr >= 0.95*locations["about"] && curr < 0.95*locations["projects"]) toggle_active("navbar-about");
+    if(curr >= locations["home"] && curr < 0.95*locations["about"]) {
+        toggle_active("navbar-home");
+        //remove_social_icons();
+    }
+    else if(curr >= 0.95*locations["about"] && curr < 0.95*locations["projects"]) {
+        toggle_active("navbar-about");
+        //add_social_icons()
+    }
     else if(curr >= 0.95*locations["projects"]) toggle_active("navbar-projects");
 };
+
+/*
+    function add_social_icons() {
+        document.getElementById("navbar-github-icon-li").classList.remove("uk-animation-reverse");
+        document.getElementById("navbar-linkedin-icon-li").classList.remove("uk-animation-reverse");
+        document.getElementById("navbar-gmail-icon-li").classList.remove("uk-animation-reverse");
+        document.getElementById("navbar-github-icon-li").classList.add("uk-animation-slide-top");
+        document.getElementById("navbar-linkedin-icon-li").classList.add("uk-animation-slide-top");
+        document.getElementById("navbar-gmail-icon-li").classList.add("uk-animation-slide-top");
+    }
+
+    function remove_social_icons() {
+        document.getElementById("navbar-github-icon-li").classList.add("uk-animation-reverse");
+        document.getElementById("navbar-linkedin-icon-li").classList.add("uk-animation-reverse");
+        document.getElementById("navbar-gmail-icon-li").classList.add("uk-animation-reverse");
+        document.getElementById("navbar-github-icon-li").classList.remove("uk-animation-slide-top");
+        document.getElementById("navbar-linkedin-icon-li").classList.remove("uk-animation-slide-top");
+        document.getElementById("navbar-gmail-icon-li").classList.remove("uk-animation-slide-top");
+        document.getElementById("navbar-github-icon-li").classList.add("uk-animation-slide-top");
+        document.getElementById("navbar-linkedin-icon-li").classList.add("uk-animation-slide-top");
+        document.getElementById("navbar-gmail-icon-li").classList.add("uk-animation-slide-top");
+    }
+*/
+
 
 function toggle_active(id) {
     var navbar_items = document.getElementsByClassName("navbar-item");

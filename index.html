@@ -5,6 +5,8 @@
         <title>Michael E. Berkowitz</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Personal website for software developer, computer engineer, and physicist Michael E. Berkowitz.">
+
         <!-- UIkit CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/css/uikit.min.css" />
 
@@ -14,90 +16,93 @@
     </head>
     <body onload="load()" onscroll="scroll()" onresize="resize()">
         <nav id="navbar"   class="uk-animation-fade uk-navbar-container" uk-navbar uk-sticky="bottom: #offset">
-            <div id="navbar-2" class="uk-navbar-left">
-                <ul id="navbar-ul" class="uk-navbar-nav">
+            <div id="navbar-left" class="uk-navbar-left">
+                <ul id="navbar-left-ul" class="uk-navbar-nav">
                     <li id="navbar-home" class="uk-active navbar-item" onclick="navbar_click(this)"><a>Home</a></li>
                     <li id="navbar-about" class="navbar-item" onclick="navbar_click(this)"><a>About</a></li>
                     <li id="navbar-projects" class="navbar-item" onclick="navbar_click(this)"><a>Projects</a></li>
                 </ul>
             </div>
-        </nav>
-        <div id="home"     class="uk-background-cover uk-height-large uk-light uk-flex uk-flex-center uk-flex-middle" uk-parallax="bgy:-400; opacity: 1,0" style="background-image: url(static/hero_transparent.png);">
-            <span id="home-text-container">
-                <p id="name-text" class="uk-heading-medium uk-text-center text">MICHAEL BERKOWITZ</p>
-                <p id="title-text" class="uk-text-large uk-text-center text" uk-scrollspy="cls: uk-animation-slide-top; repeat: true" style="animation-duration: 0.75s">SOFTWARE DEVELOPER | COMPUTER ENGINEER | PHYSICIST</p>
-                <ul id="social-icon-ul" class="uk-subnav uk-flex-center">
-                    <li id="github-icon-li" uk-scrollspy="cls: uk-animation-slide-left; repeat: true" style="animation-duration: 0.75s">
-                        <a id="github-icon" href="https://www.github.com/meberko" uk-icon="icon: github; ratio: 3"></a>
+            <div id="navbar-right" class="uk-navbar-right">
+                <ul id="navbar-right-ul" class="uk-navbar-nav">
+                    <li id="navbar-github-icon-li" style="animation-duration: 0.75s">
+                        <a id="navbar-github-icon" href="https://www.github.com/meberko" uk-icon="icon: github; ratio: 1.5"></a>
                     </li>
-                    <li id="linkedin-icon-li" uk-scrollspy="cls:uk-animation-slide-bottom; repeat: true" style="animation-duration: 0.75s">
-                        <a id="linkedin-icon" href="https://www.linkedin.com/in/michaelberkowitz" uk-icon="icon: linkedin; ratio: 3"></a>
+                    <li id="navbar-linkedin-icon-li" style="animation-duration: 0.75s">
+                        <a id="navbar-linkedin-icon" href="https://www.linkedin.com/in/michaelberkowitz" uk-icon="icon: linkedin; ratio: 1.5"></a>
                     </li>
-                    <li id="gmail-icon-li" uk-scrollspy="cls:uk-animation-slide-right; repeat: true" style="animation-duration: 0.75s">
-                        <a id="gmail-icon" href="mailto:m.e.berkowitz@gmail.com" uk-icon="icon: google; ratio: 3"></a>
+                    <li id="navbar-gmail-icon-li" style="animation-duration: 0.75s">
+                        <a id="navbar-gmail-icon" href="mailto:m.e.berkowitz@gmail.com" uk-icon="icon: google; ratio: 1.5"></a>
                     </li>
                 </ul>
+            </div>
+        </nav>
+        <div id="home"     class="uk-background-cover uk-height-large uk-light uk-flex uk-flex-center uk-flex-middle" uk-parallax="bgy:-400; opacity: 1,0">
+            <span id="home-text-container">
+                <p id="name-text" class="uk-heading-medium uk-text-center">MICHAEL BERKOWITZ</p>
+                <p id="title-text" class="uk-text-large uk-text-center" uk-scrollspy="cls: uk-animation-slide-top; repeat: true" style="animation-duration: 0.75s">| SOFTWARE DEVELOPER |<br class="inv-big">| COMPUTER ENGINEER |<br class="inv-big">| PHYSICIST |</p>
+                <p id="resume-text" class="uk-text-large uk-text-center" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true" style="animation-duration: 0.75s"><a href="/static/Resume200806.pdf">RESUME</a></p>
             </span>
         </div>
         <div id="about"    class="uk-container uk-align-center" uk-scrollspy="target: >*; cls: uk-animation-slide-left; repeat: true; delay: 200;" style="animation-duration: 1s">
-            <img id="headshot" class="uk-width-1-5 uk-align-center" data-src="/static/headshot-circle.png" alt="" uk-img>
+            <img id="headshot" class="uk-width-1-5 uk-align-center" data-src="/static/images/headshot-circle.png" alt="Michael Berkowitz headshot." uk-img>
             <div id="about-grid" uk-grid>
                 <div id="about-container" class="uk-width-expand uk-margin">
-                    <div id="about-card" class="uk-card-default uk-padding-small uk-card-body" style="border-radius: 10px">
-                        <h2 id="who-is" class="uk-header-small uk-text-center uk-margin-small" style="color: white">Who is this guy?</h2>
+                    <div id="about-card" class="uk-card-default uk-padding-small uk-card-body">
+                        <h2 id="who-is" class="uk-header-small uk-text-center uk-margin-small card-title">Who is this guy?</h2>
                         <div id="who-is-divider-1" class="uk-divider-icon uk-align-center no-margin"></div>
                         <p id="description" class="uk-text-center uk-margin-small uk-text-medium">He is a NYC-based software developer, computer engineer, and physics graduate student at Columbia University.</p>
                         <div id="who-is-divider-2" class="uk-divider-icon uk-align-center no-margin"></div>
                         <div id="skills-publications-grid" class="uk-child-width-expand uk-margin-top-small uk-text-center" uk-grid>
-                            <div id="skills">
-                                <h3 class="sub-titles" id="skills-title">Skills</h3>
+                            <div id="skills" class="uk-width-1-2@m">
+                                <h3 id="skills-title" class="sub-titles">Skills</h3>
                                 <div id="skills-parent-grid" uk-scrollspy="target: >*; cls: uk-animation-scale-up; repeat: true; delay: 400;" style="animation-duration: 1s" uk-grid>
                                     <div id="skills-left-grid" class="uk-width-1-2">
                                         <div id="c-skill" class="uk-align-left uk-width-1-2@m uk-margin-remove">
                                             <p class="skills uk-margin-remove">
-                                                <object class="uk-padding-small skill-icon" type="image/svg+xml" data="/static/code.svg"></object>
+                                                <img class="uk-padding-small skill-icon" src="/static/images/code.svg"></img>
                                                 C
                                             </p>
                                         </div>
                                         <div id="cpp-skill" class="uk-align-left uk-width-1-2@m uk-margin-remove">
                                             <p class="skills uk-margin-remove">
-                                                <object class="uk-padding-small skill-icon" type="image/svg+xml" data="/static/code.svg"></object>
+                                                <img class="uk-padding-small skill-icon" src="/static/images/code.svg"></img>
                                                 C++
                                             </p>
                                         </div>
                                         <div id="python-skill" class="uk-align-left uk-width-1-2@m uk-margin-remove">
                                             <p class="skills uk-margin-remove">
-                                                <object class="uk-padding-small skill-icon" type="image/svg+xml" data="/static/code.svg"></object>
+                                                <img class="uk-padding-small skill-icon" src="/static/images/code.svg"></img>
                                                 Python
                                             </p>
                                         </div>
                                         <div id="matlab-skill" class="uk-align-left uk-width-1-2@m uk-margin-remove">
                                             <p class="skills uk-margin-remove">
-                                                <object class="uk-padding-small skill-icon" type="image/svg+xml" data="/static/code.svg"></object>
+                                                <img class="uk-padding-small skill-icon" src="/static/images/code.svg"></img>
                                                 MATLAB
                                             </p>
                                         </div>
                                         <div id="html-skill" class="uk-align-left uk-width-1-2@m uk-margin-remove">
                                             <p class="skills uk-margin-remove">
-                                                <object class="uk-padding-small skill-icon" type="image/svg+xml" data="/static/code.svg"></object>
+                                                <img class="uk-padding-small skill-icon" src="/static/images/code.svg"></img>
                                                 HTML
                                             </p>
                                         </div>
                                         <div id="css-skill" class="uk-align-left uk-width-1-2@m uk-margin-remove">
                                             <p class="skills uk-margin-remove">
-                                                <object class="uk-padding-small skill-icon" type="image/svg+xml" data="/static/code.svg"></object>
+                                                <img class="uk-padding-small skill-icon" src="/static/images/code.svg"></img>
                                                 CSS
                                             </p>
                                         </div>
                                         <div id="js-skill" class="uk-align-left uk-width-1-2@m uk-margin-remove">
                                             <p class="skills uk-margin-remove">
-                                                <object class="uk-padding-small skill-icon" type="image/svg+xml" data="/static/code.svg"></object>
+                                                <img class="uk-padding-small skill-icon" src="/static/images/code.svg"></img>
                                                 JS
                                             </p>
                                         </div>
                                         <div id="sql-skill" class="uk-align-left uk-width-1-2@m uk-margin-remove">
                                             <p class="skills uk-margin-remove">
-                                                <object class="uk-padding-small skill-icon" type="image/svg+xml" data="/static/code.svg"></object>
+                                                <img class="uk-padding-small skill-icon" src="/static/images/code.svg"></img>
                                                 SQL
                                             </p>
                                         </div>
@@ -105,37 +110,49 @@
                                     <div id="skill-right-grid" class="uk-width-1-2">
                                         <div id="linux-skill" class="uk-align-left uk-width-1-2@m uk-margin-remove">
                                             <p class="skills uk-margin-remove">
-                                                <object class="uk-padding-small skill-icon" type="image/svg+xml" data="/static/skill.svg"></object>
+                                                <img class="uk-padding-small skill-icon" src="/static/images/skill.svg"></img>
                                                 Linux
                                             </p>
                                         </div>
                                         <div id="git-skill" class="uk-align-left uk-width-1-2@m uk-margin-remove">
                                             <p class="skills uk-margin-remove">
-                                                <object class="uk-padding-small skill-icon" type="image/svg+xml" data="/static/skill.svg"></object>
+                                                <img class="uk-padding-small skill-icon" src="/static/images/skill.svg"></img>
                                                 Git
+                                            </p>
+                                        </div>
+                                        <div id="unix-skill" class="uk-align-left uk-width-1-2@m uk-margin-remove">
+                                            <p class="skills uk-margin-remove">
+                                                <img class="uk-padding-small skill-icon" src="/static/images/skill.svg"></img>
+                                                CLI
+                                            </p>
+                                        </div>
+                                        <div id="scripting-skill" class="uk-align-left uk-width-1-2@m uk-margin-remove">
+                                            <p class="skills uk-margin-remove">
+                                                <img class="uk-padding-small skill-icon" src="/static/images/skill.svg"></img>
+                                                Scripting
                                             </p>
                                         </div>
                                         <div id="docker-skill" class="uk-align-left uk-width-1-2@m uk-margin-remove">
                                             <p class="skills uk-margin-remove">
-                                                <object class="uk-padding-small skill-icon" type="image/svg+xml" data="/static/skill.svg"></object>
+                                                <img class="uk-padding-small skill-icon" src="/static/images/skill.svg"></img>
                                                 Docker
                                             </p>
                                         </div>
                                         <div id="k8s-skill" class="uk-align-left uk-width-1-2@m uk-margin-remove">
                                             <p class="skills uk-margin-remove">
-                                                <object class="uk-padding-small skill-icon" type="image/svg+xml" data="/static/skill.svg"></object>
+                                                <img class="uk-padding-small skill-icon" src="/static/images/skill.svg"></img>
                                                 K8s
                                             </p>
                                         </div>
                                         <div id="ml-skill" class="uk-align-left uk-width-1-2@m uk-margin-remove">
                                             <p class="skills uk-margin-remove">
-                                                <object class="uk-padding-small skill-icon" type="image/svg+xml" data="/static/skill.svg"></object>
+                                                <img class="uk-padding-small skill-icon" src="/static/images/skill.svg"></img>
                                                 ML
                                             </p>
                                         </div>
                                         <div id="fem-skill" class="uk-align-left uk-width-1-2@m uk-margin-remove">
                                             <p class="skills uk-margin-remove">
-                                                <object class="uk-padding-small skill-icon" type="image/svg+xml" data="/static/skill.svg"></object>
+                                                <img class="uk-padding-small skill-icon" src="/static/images/skill.svg"></img>
                                                 FEM
                                             </p>
                                         </div>
@@ -143,11 +160,11 @@
                                 </div>
                             </div>
                             <div id="publications">
-                                <h3 class="sub-titles" id="publications-title">Publications</h3>
-                                <div class="uk-position-relative uk-visible-toggle uk-light uk-align-center" tabindex="-1" uk-slideshow="max-width: 70%; max-height: 70%">
+                                <h3 id="publications-title" class="sub-titles">Publications</h3>
+                                <div class="uk-position-relative uk-visible-toggle uk-light uk-align-center uk-margin-remove" tabindex="-1" uk-slideshow="max-width: 70%; max-height: 70%">
                                     <ul class="uk-slideshow-items">
                                         <li>
-                                            <img src="/static/Nature_screenshot.png" alt="" uk-cover>
+                                            <img src="/static/images/Nature_screenshot.png" alt="" uk-cover>
                                             <div class="uk-overlay uk-overlay-primary uk-transition-slide-bottom uk-padding-small uk-position-bottom uk-position-small">
                                                 <div class="uk-transition-slide-bottom">
                                                     <a class="caption-text" href="https://www.nature.com/articles/nature25029">Nature 556, 70–73 (2018)</a>
@@ -155,7 +172,7 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <img src="/static/PNAS_screenshot.png" alt="" uk-cover>
+                                            <img src="/static/images/PNAS_screenshot.png" alt="" uk-cover>
                                             <div class="uk-overlay uk-overlay-primary uk-transition-slide-bottom uk-padding-small uk-position-bottom uk-position-small">
                                                 <div class="uk-transition-slide-bottom">
                                                     <a class="caption-text" href="https://www.pnas.org/content/pnas/116/31/15414.full.pdf">PNAS 116 (31) 15414-15419 (2019)</a>
@@ -173,8 +190,8 @@
             </div>
         </div>
         <div id="projects" class="uk-container uk-align-center" uk-scrollspy="target: >*; cls: uk-animation-slide-left; repeat: true; delay: 200;" style="animation-duration: 1s">
-            <div id="project-card" class="uk-card-default uk-padding-small uk-card-body" style="border-radius: 10px">
-                <h2 id="what-has" class="uk-header-small uk-text-center uk-margin-small" style="color: white">What has he done?</h2>
+            <div id="project-card" class="uk-card-default uk-padding-small uk-card-body">
+                <h2 id="what-has" class="uk-header-small uk-text-center uk-margin-small card-title">What has he done?</h2>
                 <div id="who-is-divider-1" class="uk-divider-icon uk-align-center no-margin"></div>
                 <div id="projects-grid" uk-grid>
                     <div class="uk-width-1-1">
@@ -187,8 +204,8 @@
                     <div class="uk-width-1-1">
                         <ul id="component-tab" class="uk-switcher">
                             <li>
-                                <img class="uk-align-left uk-margin-remove-bottom@m uk-width-1-2@m project-img" src="/static/EigenProbe_screenshot.png"></img>
-                                <p class="project-text uk-card-text uk-margin-remove uk-padding-small">
+                                <img class="uk-align-left uk-margin-remove-bottom@m uk-width-1-2@m project-img" src="/static/images/EigenProbe_screenshot.png"></img>
+                                <p class="card-text uk-card-text uk-margin-remove uk-padding-small">
                                     <a class="uk-link-text" href="https://www.github.com/meberko/EigenProbe">EigenProbe</a> is a
                                     simulation framework built in Python to calculate and depict the propagation of coupled light-matter
                                     (polaritonic) modes in 2D quantum materials. This project leverages a spectral approach to the
@@ -197,8 +214,8 @@
                                 </p>
                             </li>
                             <li>
-                                <img class="uk-align-left uk-margin-remove-bottom@m uk-width-1-2@m project-img" src="/static/ScheduleBot_screenshot.png"></img>
-                                <p class="project-text uk-card-text uk-margin-remove uk-padding-small">
+                                <img class="uk-align-left uk-margin-remove-bottom@m uk-width-1-2@m project-img" src="/static/images/ScheduleBot_screenshot.png"></img>
+                                <p class="card-text uk-card-text uk-margin-remove uk-padding-small">
                                     <a class="uk-link-text" href="https://www.github.com/meberko/ScheduleBot">ScheduleBot</a> is a
                                     scheduling framework built in Python to automate the process of assigning regularly occuring duties.
                                     It was designed during my year as a head teaching assistant of the Columbia Physics Department
@@ -206,8 +223,8 @@
                                 </p>
                             </li>
                             <li>
-                                <img class="uk-align-left uk-margin-remove-bottom@m uk-width-1-2@m project-img" src="/static/Spidey_screenshot.png"></img>
-                                <p class="project-text uk-card-text uk-margin-remove uk-padding-small">
+                                <img class="uk-align-left uk-margin-remove-bottom@m uk-width-1-2@m project-img" src="/static/images/Spidey_screenshot.png"></img>
+                                <p class="card-text uk-card-text uk-margin-remove uk-padding-small">
                                     <a class="uk-link-text" href="https://www.github.com/meberko/Spidey">Spidey</a> is my own personal
                                     WEBsite (get it?!) built from the ground up in HTML, CSS (using UIKit), Javascript, and Flask. I
                                     think he's looking pretty <i>amazing</i> right now but he's a work in progress. Perhaps one day he
@@ -221,6 +238,7 @@
         </div>
     </body>
     <footer>
+        <img id="logo" src="/static/images/android-chrome-192x192.png"></img><br>
         <small>&copy; Copyright 2020, Michael E. Berkowitz</small>
 
         <script src="/static/main.js"></script>
